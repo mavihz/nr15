@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras e NR-15</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadoras e NR-15</h1>
+
+        <!-- Calculadora de Acréscimo Salarial por Insalubridade -->
+        <section class="calculator">
+            <h2>Calculadora de Acréscimo Salarial por Insalubridade</h2>
+            <label for="salario">Salário Base (R$):</label>
+            <input type="number" id="salario" step="0.01">
+            <label for="nivel">Nível de Insalubridade:</label>
+            <select id="nivel">
+                <option value="10">Mínimo (10%)</option>
+                <option value="20">Médio (20%)</option>
+                <option value="40">Máximo (40%)</option>
+            </select>
+            <button onclick="calcularAcrescimo()">Calcular Acréscimo</button>
+            <div id="resultado-acrescimo"></div>
+        </section>
+
+        <!-- Calculadora de Tempo de Exposição ao Ruído -->
+        <section class="calculator">
+            <h2>Calculadora de Tempo de Exposição ao Ruído</h2>
+            <h3>Emprego 1</h3>
+            <label for="nivel-ruido1">Nível de Ruído (dB) Emprego 1:</label>
+            <input type="number" id="nivel-ruido1" step="1">
+            <label for="tempo-exposicao1">Tempo Real de Exposição Emprego 1 (horas):</label>
+            <input type="number" id="tempo-exposicao1" step="0.01">
+
+            <h3>Emprego 2</h3>
+            <label for="nivel-ruido2">Nível de Ruído (dB) Emprego 2:</label>
+            <input type="number" id="nivel-ruido2" step="1">
+            <label for="tempo-exposicao2">Tempo Real de Exposição Emprego 2 (horas):</label>
+            <input type="number" id="tempo-exposicao2" step="0.01">
+            
+            <button onclick="verificarInsalubridade()">Verificar Insalubridade</button>
+            <div id="resultado-ruido"></div>
+        </section>
+
+        <!-- Calculadoras de Física -->
+        <section class="calculator">
+            <h2>Calculadoras de Física</h2>
+            <div>
+                <h3>Potência</h3>
+                <label for="tensao">Tensão (V):</label>
+                <input type="number" id="tensao" step="0.01">
+                <label for="corrente">Corrente (A):</label>
+                <input type="number" id="corrente" step="0.01">
+                <button onclick="calcularPotencia()">Calcular Potência</button>
+                <div id="resultado-potencia"></div>
+            </div>
+            <div>
+                <h3>Tensão</h3>
+                <label for="potencia-tensao">Potência (W):</label>
+                <input type="number" id="potencia-tensao" step="0.01">
+                <label for="corrente-tensao">Corrente (A):</label>
+                <input type="number" id="corrente-tensao" step="0.01">
+                <button onclick="calcularTensao()">Calcular Tensão</button>
+                <div id="resultado-tensao"></div>
+            </div>
+            <div>
+                <h3>Corrente</h3>
+                <label for="potencia-corrente">Potência (W):</label>
+                <input type="number" id="potencia-corrente" step="0.01">
+                <label for="tensao-corrente">Tensão (V):</label>
+                <input type="number" id="tensao-corrente" step="0.01">
+                <button onclick="calcularCorrente()">Calcular Corrente</button>
+                <div id="resultado-corrente"></div>
+            </div>
+        </section>
+
+        <!-- Norma Regulamentadora NR-15 -->
+        <section class="info">
+            <h2>Norma Regulamentadora NR-15</h2>
+            <p>A Norma Regulamentadora NR-15 estabelece as condições de trabalho insalubres e define os limites de exposição a agentes químicos, físicos e biológicos. Abaixo estão os tópicos relevantes da norma:</p>
+            <h3>15.1 - Disposições Gerais</h3>
+            <p>Estabelece as condições gerais que caracterizam as atividades e operações insalubres.</p>
+            <h3>15.2 - Limites de Tolerância</h3>
+            <p>Define os limites de tolerância para agentes insalubres, incluindo ruído, temperatura e outros.</p>
+            <h3>15.3 - Procedimentos de Avaliação</h3>
+            <p>Descreve os procedimentos e métodos para avaliar a exposição a agentes insalubres e determinar a necessidade de medidas de controle.</p>
+            <h3>15.4 - Medidas de Controle</h3>
+            <p>Especifica as medidas de controle e proteção que devem ser adotadas para minimizar a exposição a níveis insalubres.</p>
+            <h3>15.5 - Equipamentos de Proteção</h3>
+            <p>Define os tipos e requisitos dos Equipamentos de Proteção Individual (EPIs) e Coletiva (EPCs) a serem usados em ambientes insalubres.</p>
+            <p>Para detalhes completos, consulte a <a href="https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/arquivos/normas-regulamentadoras/nr-15-atualizada-2022.pdf" target="_blank">Norma Regulamentadora NR-15</a>.</p>
+        </section>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
